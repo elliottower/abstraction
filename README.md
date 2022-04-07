@@ -1,6 +1,6 @@
 # Abstraction Project
 
-This code implements a scalable way of investigating the layer-by-layer evolution of abstraction in deep neural networks. ([Kozma, 2018](https://www.sciencedirect.com/science/article/pii/S1877050918322294))
+This code implements a scalable way of investigating the layer-by-layer evolution of abstraction in deep neural networks. (Extending & reimplementing [Kozma, 2018](https://www.sciencedirect.com/science/article/pii/S1877050918322294))
 
 Code adapted from [PyTorch Imagenet Training Example](https://github.com/pytorch/examples/tree/main/imagenet)
 
