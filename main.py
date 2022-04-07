@@ -68,9 +68,9 @@ parser.add_argument('--seed', default=None, type=int,
                     help='seed for initializing training. ')
 parser.add_argument('--gpu', default=None, type=int,
                     help='GPU id to use.')
-parser.add_argument('--sample_percent', type=float, default=0.001, help='percentage of neurons to sample from each layer for abstraction calculation')
+parser.add_argument('--sample_percent', type=float, default=0.2, help='percentage of neurons to sample from each layer for abstraction calculation')
 parser.add_argument('--output_name', type=str, default="", help="Custom name for output folder and Q folder, allows for saving of cached values without overwriting every time")
-parser.add_argument('--theta', type=float, default=0.01, help="Theta value for Q matrix: correlation value which neurons in the next layer must have towards the output in order to be kept nonzero")
+parser.add_argument('--theta', type=float, default=0.75, help="Theta value for Q matrix: correlation value which neurons in the next layer must have towards the output in order to be kept nonzero")
 parser.add_argument('--theta-list', nargs='+', type=float, help="Allows for passing in variable length list of theta values, starting from the last layer and going backwards")
 
 best_acc1 = 0
