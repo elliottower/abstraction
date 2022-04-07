@@ -9,7 +9,7 @@ Code adapted from [PyTorch Imagenet Training Example](https://github.com/pytorch
 - Install PyTorch ([pytorch.org](http://pytorch.org))
 - `pip install -r requirements.txt`
 - Download the ImageNet dataset from http://www.image-net.org/
-    - Then, move and extract the training and validation images to labeled subfolders, using [the following shell script](extract_ILSVRC.sh)
+    - Then, move and extract the training and validation images to labeled subfolders, using [the following shell script](extract_ILSVRC.sh): `bash extract_ILSVRC.sh`
 
 ## Experiments
 
