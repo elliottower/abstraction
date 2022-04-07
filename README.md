@@ -1,8 +1,10 @@
 # Abstraction Project
 
-This code implements a scalable way of investigating the layer-by-layer evolution of abstraction in deep neural networks. (Extending & reimplementing [Kozma, 2018](https://www.sciencedirect.com/science/article/pii/S1877050918322294))
+This repo provides a scalable way of investigating the layer-by-layer evolution of abstraction in deep neural networks.
 
-Code adapted from [PyTorch Imagenet Training Example](https://github.com/pytorch/examples/tree/main/imagenet)
+(Extension of *"Evolution of Abstraction Across Layers in Deep Learning Neural Networks"* ([Kozma, 2018](https://www.sciencedirect.com/science/article/pii/S1877050918322294)))
+
+Dataloading code adapted from [PyTorch Imagenet Training Example](https://github.com/pytorch/examples/tree/main/imagenet)
 
 ## Requirements
 
@@ -13,16 +15,24 @@ Code adapted from [PyTorch Imagenet Training Example](https://github.com/pytorch
 
 ## Experiments
 
-To run an experiment, run `main.py` with the desired model architecture and the path to the ImageNet dataset:
+To run an experiment, run `main.py` with the desired model architecture and the path to the ImageNet dataset. 
 
-```bash
-python main.py -a resnet18 [imagenet-folder with train and val folders]
+```bash 
+python main.py -a resnet18 [imagenet-folder with train and val folders] 
 ```
 
-The default learning rate schedule starts at 0.1 and decays by a factor of 10 every 30 epochs. This is appropriate for ResNet and models with batch normalization, but too high for AlexNet and VGG. Use 0.01 as the initial learning rate for AlexNet or VGG:
+### Example: ResNet18
 
 ```bash
-python main.py -a alexnet --lr 0.01 [imagenet-folder with train and val folders]
+python main.py --arch resnet18 \
+               --workers 2 \
+               --batch-size 50 \
+               --evaluate \
+               --pretrained \
+               --sample_percent 0.4 \
+               --output_name "" \
+               --theta 0.75 \
+               imagenet/
 ```
 
 ## Usage
