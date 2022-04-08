@@ -18,7 +18,7 @@ Dataloading code adapted from [PyTorch Imagenet Training Example](https://github
 To run an experiment, run `main.py` with the desired model architecture and the path to the ImageNet dataset. 
 
 ```bash 
-python main.py -a resnet18 [imagenet-folder with train and val folders] 
+python main.py -a resnet18 --data [imagenet-folder with train and val folders] 
 ```
 
 ### Example: ResNet18
@@ -32,7 +32,7 @@ python main.py --arch resnet18 \
                --sample_percent 0.4 \
                --output_name "" \
                --theta 0.75 \
-               imagenet/
+               --data imagenet/
 ```
 
 ## Usage
@@ -46,8 +46,8 @@ usage: main.py [-h] [--arch ARCH] [-j N] [--epochs N] [--start-epoch N] [-b N]
 
 PyTorch ImageNet Training
 
-positional arguments:
-  DIR                   path to dataset
+required arguments:
+  --data DIR            path to imagenet dataset (with train and val folders)
 
 optional arguments:
   -h, --help            show this help message and exit
